@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="怪物猎人," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="怪物猎人xx 全技能效果表基础能力值相关 体力 　　+15：体力最大値+50 　　+10：体力最大値+20 　　-10：体力最大値减少10 　　-15：体力最大値减少30">
+<meta name="keywords" content="怪物猎人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怪物猎人xx 全技能效果表">
+<meta property="og:url" content="http://Fullstop000.github.io/2017/09/29/mhxx-abilities/index.html">
+<meta property="og:site_name" content="Fullstop000&#39;s blog">
+<meta property="og:description" content="怪物猎人xx 全技能效果表基础能力值相关 体力 　　+15：体力最大値+50 　　+10：体力最大値+20 　　-10：体力最大値减少10 　　-15：体力最大値减少30">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-30T06:44:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="怪物猎人xx 全技能效果表">
+<meta name="twitter:description" content="怪物猎人xx 全技能效果表基础能力值相关 体力 　　+15：体力最大値+50 　　+10：体力最大値+20 　　-10：体力最大値减少10 　　-15：体力最大値减少30">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://Fullstop000.github.io/2017/09/29/mhxx-abilities/"/>
+
+
+
+
+
+  <title>怪物猎人xx 全技能效果表 | Fullstop000's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fullstop000's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">没有钱的程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Fullstop000.github.io/2017/09/29/mhxx-abilities/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fullstop000">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fullstop000's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">怪物猎人xx 全技能效果表</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-29T18:33:17+08:00">
+                2017-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游戏/" itemprop="url" rel="index">
+                    <span itemprop="name">游戏</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="怪物猎人xx-全技能效果表"><a href="#怪物猎人xx-全技能效果表" class="headerlink" title="怪物猎人xx 全技能效果表"></a>怪物猎人xx 全技能效果表</h1><p><strong>基础能力值相关</strong></p>
+<p><strong>体力</strong></p>
+<p>　　+15：体力最大値+50</p>
+<p>　　+10：体力最大値+20</p>
+<p>　　-10：体力最大値减少10</p>
+<p>　　-15：体力最大値减少30</p>
+<a id="more"></a>
+<p><strong>攻击</strong></p>
+<p>　　+20：攻击力+20(※)</p>
+<p>　　+15：攻击力+15</p>
+<p>　　+10：攻击力+10</p>
+<p>　　-10：攻击力-5</p>
+<p>　　-15：攻击力-10</p>
+<p>　　-20：攻击力-15</p>
+<p>　　※这就是就是版上大家俗称的攻大</p>
+<p><strong>防御</strong></p>
+<p>　　+20：防御力×1.06倍+25</p>
+<p>　　+15：防御力×1.03倍+20</p>
+<p>　　+10：防御力+15</p>
+<p>　　-10：防御力-10</p>
+<p>　　-15：防御力×0.95倍-10</p>
+<p>　　-20：防御力×0.9倍-10</p>
+<p><strong>（本文作者Saito871007，版权归原作者所有）</strong></p>
+<p><strong>属性相关</strong></p>
+<p><strong>属性攻击</strong></p>
+<p>　　+10：一般属性伤害（火、水、水、雷、龙）1.1倍</p>
+<p>　　-10：一般属性伤害（火、水、水、雷、龙）0.9倍</p>
+<p>　　1.同时配单属性攻击强化+2时，属性值为：</p>
+<p>　　(该属性x1.2)+6</p>
+<p>　　2.同时配单属性攻击强化+1时，属性值为：</p>
+<p>　　(该属性x1.15)+4</p>
+<p><strong>属性耐性</strong></p>
+<p>　　+10：无效化属性（火、水、水、雷、龙）造成的异常(像是被火烧伤/被水喷到影响耐力值回复那种)</p>
+<p><strong>属性会心</strong></p>
+<p>　　+10：暴击(攻击有红光)时属性伤害提升</p>
+<p>　　片手剑、双剑、弓1.35倍</p>
+<p>　　轻/重弩1.3倍</p>
+<p>　　大剑1.2倍、其余1.25倍</p>
+<p><strong>火属性攻击</strong></p>
+<p>　　+15：武器的火属性伤害×1.1倍+6</p>
+<p>　　+10：武器的火属性伤害×1.05倍+4</p>
+<p>　　-10：武器の火属性値×0.75倍</p>
+<p><strong>火耐性</strong></p>
+<p>　　+15：火耐性+20，耐性値于25以上火势不论大小都无效</p>
+<p>　　+10：火耐性+15，耐性値于15以上无効化火势小的烧伤</p>
+<p>　　-10：火耐性-20</p>
+<p><strong>水属性攻击</strong></p>
+<p>　　+15：武器の水属性伤害×1.1倍+6</p>
+<p>　　+10：武器の水属性伤害×1.05倍+4</p>
+<p>　　-10：武器的水属性値×0.75倍</p>
+<p><strong>水耐性</strong></p>
+<p>　　+15：水耐性+20、耐性値于25以上…(以下略)</p>
+<p>　　+10：水耐性+15、耐性値15以上(略)</p>
+<p>　　-10：水耐性弱化水耐性-20</p>
+<p><strong>水属性攻击</strong></p>
+<p>　　+15：武器的水属性伤害×1.1倍+6</p>
+<p>　　+10：武器的水属性伤害×1.05倍+4</p>
+<p>　　-10：武器的水属性値×0.75倍</p>
+<p><strong>水耐性</strong></p>
+<p>　　+15：水耐性+20</p>
+<p>　　+10：水耐性+15</p>
+<p>　　-10：水耐性-10</p>
+<p><strong>雷属性攻击</strong></p>
+<p>　　+15：武器的雷属性伤害×1.1倍+6</p>
+<p>　　+10：武器的雷属性伤害×1.05倍+4</p>
+<p>　　-10：武器的雷属性値×0.75倍</p>
+<p><strong>雷耐性</strong></p>
+<p>　　+15：雷耐性+20</p>
+<p>　　+10：雷耐性+15</p>
+<p>　　-10：雷耐性弱化雷耐性が-20</p>
+<p><strong>龙属性攻击</strong></p>
+<p>　　+15：武器的龙属性伤害×1.1倍+6</p>
+<p>　　+10：武器的龙属性伤害×1.05倍+4</p>
+<p>　　-10：武器的龙属性値×0.75倍</p>
+<p><strong>龙耐性</strong></p>
+<p>　　+15：龙耐性+20</p>
+<p>　　+10：龙耐性+15</p>
+<p>　　-10 ：龙耐性-20</p>
+<p><strong>异常状态相关</strong></p>
+<p><strong>特殊攻击</strong></p>
+<p>　　+15：状态异常攻击+2，毒、麻痹、睡眠、捕获的积蓄値×1.2倍+10</p>
+<p>　　+10：状态异常攻击+1，毒、麻痹、睡眠、捕获的积蓄値×1.1倍+10</p>
+<p>　　-10：状态异常攻击弱化，毒、麻痹、睡眠、捕获的积蓄値×0.9倍</p>
+<p><strong>特殊会心</strong></p>
+<p>　　+10：会心撃【特殊】暴击时状态异常的积蓄値×1.2倍</p>
+<p><strong>毒</strong></p>
+<p>　　+10毒耐性不会进入毒、猛毒状态状态。激毒状态减轻成猛毒</p>
+<p>　　-10：毒倍加，毒伤害×2</p>
+<p><strong>麻痹</strong></p>
+<p>　　+10麻痹无効，防麻痹状态</p>
+<p>　　-10：麻痹倍加，麻痹状态持续时间延长</p>
+<p><strong>睡眠</strong></p>
+<p>　　+10：睡眠无効，防睡眠状态</p>
+<p>　　-10：睡眠倍加，睡眠状态时间延长</p>
+<p><strong>气絶</strong></p>
+<p>　　+15：气絶无効，防气绝状态</p>
+<p>　　+10：气絶确率半减，本来要气绝的情况有二分之一机率不会气绝</p>
+<p>　　-10：气絶倍加，在要回复气绝时必要的转香菇头或按键次数增加</p>
+<p><strong>裂伤</strong></p>
+<p>　　+10：裂伤无効，防裂伤状态</p>
+<p>　　-10：裂伤倍加，裂伤伤害2倍</p>
+<p><strong>聴覚保护</strong></p>
+<p>　　+15：高级耳栓，版上俗称的高耳，无效化各种魔物的吼叫</p>
+<p>　　+10：耳栓，小吼叫无效化</p>
+<p><strong>风庄</strong></p>
+<p>　　+15：风庄【大】无効，大小风压无效化</p>
+<p>　　+10：风庄【小】无効，小风压无效化</p>
+<p><strong>耐震</strong></p>
+<p>　　+10：耐震，不会因魔物引发的震动畏惧</p>
+<p><strong>对防御DOWN</strong></p>
+<p>　　+10：铁面皮，对防御力DOWN状态有抗性</p>
+<p><strong>细菌学</strong></p>
+<p>　　+15：バイオドクター，こやし玉的调合成功率跟効果上昇、全道具使用不可状态(被臭屁喷到那种)跟爆破状态无効化、狂竜症发病减缓</p>
+<p>　　+10：细菌研究家，こやし玉的调合成功率跟効果上昇、一部份道具无法使用无效化，不会引发爆炸状态</p>
+<p><strong>狂撃耐性</strong></p>
+<p>　　+10：无我の境地，狂竜症发病变慢、克服后的能力增幅增高</p>
+<p><strong>道具相关</strong></p>
+<p><strong>运搬</strong></p>
+<p>　　+10：运搬の达人，道具运搬中的移动速度提升、自一定程度的段差跳下去道具也不会摔坏</p>
+<p><strong>回复量</strong></p>
+<p>　　+10：体力回复量UP，体力回复道具使用时的回复量×1.25倍</p>
+<p>　　-10：体力回复量DOWN，体力回复道具使用时的回复量×0.75倍</p>
+<p><strong>气まぐれ</strong></p>
+<p>　　+15：神の气まぐれ，捕虫网・十字镐・廻力标・笛（角笛、回复笛、解毒笛、鬼人笛、硬化笛）很难坏掉</p>
+<p>　　+10：精霊の气まぐれ，同上的消耗道具比较不会坏掉</p>
+<p>　　-10：恶霊の气まぐれ，同上道具容易坏掉</p>
+<p>　　-15：恶魔の气まぐれ，道具破坏狂4ni</p>
+<p><strong>食いしん坊</strong></p>
+<p>　　+15：拾い食い，まんぷく効果+吃下气力回复道具以外的东西时、三分之一的机率恢复气力最大値25</p>
+<p>　　+10：まんぷく，在吃肉类道具时，气力最大值增加量+25</p>
+<p><strong>广域</strong></p>
+<p>　　+15：广域化+2，薬草、回复薬、解毒薬、怪力の种、忍耐の种、ウチケシの実使用时，把效果100%完整传给同区域的伙伴</p>
+<p>　　+10：广域化+1，同上道具使用时，在同区域的伙伴也能获得一半的效果</p>
+<p><strong>効果持続</strong></p>
+<p>　　+10：アイテム使用强化，有强化作用的道具(怪力果实之类的，片手的刃药也算)使用后效果维持时间1.5倍</p>
+<p>　　-10：アイテム使用弱化，强化道具效果持续时间变成原本的三分之二</p>
+<p><strong>高速设置</strong></p>
+<p>　　+10：罠师，シビレ罠、落之し穴、大タ儿爆弾(G)的设置速度加快+陷阱及各种陷阱用肉（毒生肉、シビレ生肉、眠り生肉）的调合成功率提升为100％</p>
+<p><strong>采取</strong></p>
+<p>　　+15：采取+2，于采取点采取的次数增</p>
+<p>　　+10：采取+1，于采取点采取次数稍微增加</p>
+<p>　　-10：采取-1，于采取点的采取次数减少</p>
+<p><strong>肉食</strong></p>
+<p>　　+10お肉大好き，吃生肉也可以有气力最大值+50的效果，吃肉类之后会有60秒强走效果</p>
+<p><strong>食事</strong></p>
+<p>　　+15：早食い+2，各种肉、鱼等食物还有咳药的食用速度变超快</p>
+<p>　　+10：早食い+1，各种肉、鱼等食物吃的速度加快</p>
+<p>　　-10：スローライフ，当个慢活懒人，吃东西也要慢  慢  来</p>
+<p><strong>茸食</strong></p>
+<p>　　+10：キノコ大好き，可以生吃各种香菇，获得特殊效果，效果如下：</p>
+<p>　　アオキノコ＝回复薬</p>
+<p>　　毒テングダケ＝栄养剤</p>
+<p>　　ニトロダケ＝鬼人薬</p>
+<p>　　マヒダケ＝硬化薬</p>
+<p>　　クタビレダケ＝强走薬</p>
+<p>　　マンドラゴラ＝秘薬</p>
+<p>　　ドキドキノコ＝原本的负面效果以外的所有效果随机抽选</p>
+<p><strong>节食</strong></p>
+<p>　　+10：満足感，25%的机率吃东西不消耗道具(实际没喝也可以靠想象的获得道具效果的概念，脑补的极致，加速世界心念技能的体现)</p>
+<p><strong>调合成功率</strong></p>
+<p>　　+15：调合成功率+45%</p>
+<p>　　+10：调合成功率+20%</p>
+<p>　　-10：调合成功率-10%</p>
+<p>　　-15：调合成功率-20%</p>
+<p><strong>盗み无効</strong></p>
+<p>　　+10：盗み无効，道具不会被魔物偷走</p>
+<p><strong>野草知识</strong></p>
+<p>　　+15：薬草超强化，食用药草效果更加提升(回复量略低高级回复药一点)</p>
+<p>　　+10：薬草强化，食用药草就有跟回复药一样的补血量</p>
+<p><strong>地图探索相关</strong></p>
+<p><strong>狩人</strong></p>
+<p>　　+10：ハンター生活，烤肉变简单、钓鱼鱼咬饵必上钩、不用持有地图也能看到完整大地图</p>
+<p><strong>气力回复</strong></p>
+<p>　　+10：スタミナ急速回复，スタミナ回复速度两倍</p>
+<p>　　-10：スタミナ回复遅延，スタミナ回复速度×0.75倍</p>
+<p><strong>气配</strong></p>
+<p>  ：+10 隠密，不易被魔物盯上</p>
+<p>　　-10：挑発，变成容易遭魔物盯上的嘲讽体质</p>
+<p><strong>スタミナ</strong></p>
+<p>　　+10：ランナー，冲刺、双剑的鬼人化、槌子跟弓的蓄力攻击、等徐徐消耗气力的状态气力消耗减半</p>
+<p>　　-10：钝足，上述情况的气力消耗速度加倍</p>
+<p><strong>千里眼</strong></p>
+<p>　　+15自动：マーキング，可以常常知道地图上魔物的位置及状态(翅膀开阖/头的方向之类的)</p>
+<p>　　+10：探知，暂时知道魔物的位置跟状态，一定时间过后就会变成跟千里眼药一样只能看到红点</p>
+<p><strong>耐寒</strong></p>
+<p>　　+10：寒さ无効，寒冷状态下的气力最大值减少无效</p>
+<p>　　-10：寒さ倍加，天气一冷肚子饿得特别快的速度再加倍</p>
+<p><strong>耐暑</strong></p>
+<p>　　+10：暑さ无効，不会因为热而减少体力，踩在岩浆上也不会受伤</p>
+<p>　　-10：暑さ倍加，因为热减少体力速度加快</p>
+<p><strong>腹减り</strong></p>
+<p>　　+15：腹减り无効，不会空腹也不会因为饿肚子降低气力最大值</p>
+<p>　　※但天气冷还是会掉气力最大值</p>
+<p>　　+10：腹减り半减，因为饿肚子降低气力最大值的需求时间延长(※原本的6分钟掉一次→12分掉一次)</p>
+<p>　　-10：腹减り倍加【小】饿肚子减少气力的时间缩短</p>
+<p>　　-15：腹减り倍加【大】饿肚子减少气力的时间超绝缩短</p>
+<p><strong>护石王</strong></p>
+<p>　　+15：お守りハンター，挖护石有30%机率一次挖到2个</p>
+<p>　　+10：お守り収集，挖护石有20%机率一次挖到2个</p>
+<p><strong>ハチミツ</strong></p>
+<p>　：+10 ハニーハンター，采蜜可以一次采到2个</p>
+<p><strong>剥ぎ取り</strong></p>
+<p>　　+15：剥ぎ取り名人，割肉的次数+1，割肉中不会被攻击打断</p>
+<p>　　+10剥ぎ取り铁人，割肉动作不会因攻击被打断</p>
+<p><strong>走行継続</strong></p>
+<p>　　+10：キープラン，冲刺跑状态在气力降到红色区界线会停住，不会降低跑步速度</p>
+<p><strong>战斗系技能(远近通用)</strong></p>
+<p><strong>KO</strong></p>
+<p>　　+10：KO术，容易击倒魔物，简单来说就是把目标K.O.</p>
+<p>　　(※这个击倒是锁头打到魔物头冒金星，给一般的失衡击倒给骑乘击倒不同)</p>
+<p><strong>回避性能(※原本是0.2秒)</strong></p>
+<p>　　+15：回避性能+2，回避行动时的无敌时间大幅延长(0.4秒)</p>
+<p>　　+10：回避性能+1，回避行动时的无敌时间が少し长くなる(0.33秒)</p>
+<p>　　-10：回避性能DOWN，回避行动时的无敌时间缩短</p>
+<p><strong>回避距离</strong></p>
+<p>　　+10：回避距离UP，回避行动的移动距离延长（但不影响无敌时间）</p>
+<p><strong>回复速度</strong></p>
+<p>　　+15：回复速度+2，受伤后可以回复的红血条恢复速度大幅上升</p>
+<p>　　+10：回复速度+1，受伤后可以回复的红血条恢复速度上升</p>
+<p>　　-10：回复速度-1，受伤后可以回复的红血条恢复速度下降</p>
+<p>　　-15：回复速度-2，受伤后可以回复的红血条恢复速度大幅下降</p>
+<p><strong>加护</strong></p>
+<p>　　+10：精霊の加护，受伤时有四分之一的机率伤害量×0.7</p>
+<p>　　-10：恶霊の加护，受伤时有四分之一的机率伤害量×1.3</p>
+<p><strong>観察眼</strong></p>
+<p>　　+10：捕获の见极め，可以在魔物能抓起来的时候在地图看到魔物图标闪烁信号</p>
+<p><strong>减气攻击</strong></p>
+<p>　　+10：スタミナ夺取，攻击时造成魔物更多气力的减损</p>
+<p><strong>体术</strong></p>
+<p>　　+15：体术+2，回避行动，格挡成功时，降低消耗的气力(×0.5)</p>
+<p>　　+10：体术+1，回避行动，格挡成功时，小幅降低消耗的气力(×0.75)</p>
+<p>　　-10：体术-1，回避行动，格挡成功时，小幅增加消耗的气力</p>
+<p>　　-15：体术-2，回避行动，格挡成功时，增加消耗的气力</p>
+<p>　　(※隐藏效果：面对大型魔物也能做飞扑的紧急回避，原只有收刀背对魔物奔跑按B才能发动)</p>
+<p><strong>达人</strong></p>
+<p>　　+20：见切り+3，会心率+30％</p>
+<p>　　+15：见切り+2，会心率+20％</p>
+<p>　　+10：见切り+1，会心率+10％</p>
+<p>　　-10：  见切り-1，会心率-5％</p>
+<p>　　-15：  见切り-2，会心率-10％</p>
+<p>　　-20：  见切り-3，会心率-20％</p>
+<p><strong>溜め短缩</strong></p>
+<p>　　+10：集中，大剑、槌子、弓的蓄力时间-20％</p>
+<p>　　双剑、太刀、剑斧(斩击斧)的特殊量槽上升量+20％</p>
+<p>　　-10：  雑念，大剑、锤子、弓的蓄力时间増加</p>
+<p>　　双剑、太刀、剑斧(斩击斧)的特殊量槽上升量减少</p>
+<p><strong>纳刀</strong></p>
+<p>　　+10：纳刀术，收武器速度加快</p>
+<p><strong>炮术</strong></p>
+<p>　　+15炮术王：地图设置的弩炮台、大炮、铳枪的炮撃、竜撃炮、盾斧的榴弾瓶、彻甲榴弾（的爆炸伤害）威力增加</p>
+<p>　　铳枪的竜撃炮冷却时间缩短</p>
+<p>　　+10炮术师，地图设置的弩炮台、大炮、枪盾的炮撃、竜撃炮、盾斧的榴弾瓶、彻甲榴弾（的爆炸伤害）威力增加</p>
+<p><strong>本气</strong></p>
+<p>　　+15：力の解放+2，一定条件达成后触发９０秒之间的会心率50％上升・气力消费量减至四分之一</p>
+<p>　　+10：力の解放+1，一定条件达成后触发９０秒之间的会心率30％上升・气力消费量减至二分之一</p>
+<p>　　※条件</p>
+<p>　　一跟大型魔物对峙达5分钟</p>
+<p>　　二合计受到有180点的伤害值(吃满猫饭的体力为150)</p>
+<p><strong>底力</strong></p>
+<p> 　+15：火事场力+2，体力在40%以下时、防御力+45・攻击力×1.3倍</p>
+<p>　　+10：火事场力+1，体力在40%以下时、防御力+45</p>
+<p>　　-10：心配性，体力在40%以下时、防御力+21，攻击力×0.7倍</p>
+<p><strong>爆弾强化</strong></p>
+<p>　　+10：ボマー，爆弾的伤害×1.3倍、爆破属性的蓄积値×1.2倍</p>
+<p>　　小タ儿爆弾、小タ儿爆弾G、大タ儿爆弾、大タ儿爆弾G、打上げタ儿爆弾、打ち上げタ儿爆弾G、爆薬、音爆弾的调合成功率100%</p>
+<p><strong>笛</strong></p>
+<p>　　+10：笛吹き名人，笛系道具不易坏掉、狩猟笛的旋律効果时间延长</p>
+<p><strong>痛撃</strong></p>
+<p>　　+10：弱点特効，对肉质柔软的部位（肉质45以上）攻击时、会心率+50%</p>
+<p><strong>重撃</strong></p>
+<p>　　+10：破壊王，对可以破坏的部位攻击时，破坏积蓄值×1.3</p>
+<p><strong>装填数</strong></p>
+<p>　　+10：装填数UP，弩系武器使用的弾装填数、弓的蓄力攻击段阶、铳枪的炮撃、充能斧(盾斧)的瓶子装填数増加</p>
+<p><strong>无伤</strong></p>
+<p>　　+10：フ儿チャージ，满血时攻击力+20</p>
+<p><strong>根性</strong></p>
+<p>　　+10：根性，HP值在64点以上时受到致命攻击可以撑住一次不死</p>
+<p>　　※要先被打死送猫车才能发动下一次根性</p>
+<p><strong>逆境</strong></p>
+<p>　　+10：不屈，猫车后攻防上升</p>
+<p>　　补充：只对有技能且猫车的人才有效，第一次猫车：攻击力1.1倍，防御力提升15%，第二次猫车：攻击力1.2倍，防御力提升30%，第三次猫车无效果。</p>
+<p><strong>闘魂</strong></p>
+<p>　　+15：挑戦者+2，区域内大型魔物发怒的时候攻击会心更加上升(发怒后三秒发动，攻击+20，会心+15%)</p>
+<p>　　+10挑戦者+1，区域内大型魔物发怒的时候攻击会心上升(发怒后三秒发动，攻击+10，会心+10%)</p>
+<p>　　(※发动时猎人的左手部会发光)</p>
+<p><strong>剩り</strong></p>
+<p>　　+10：剩り名人，骑乘积蓄值1.25倍，骑上去之后用小刀狂砍的骑倒积蓄值1.25倍</p>
+<p>　　-10：剩り下手，变得很难骑乘</p>
+<p><strong>研磨术</strong></p>
+<p>　　+10：刚刃研磨，剑士使用磨刀石之后一分钟内不会掉斩味，远程手的场合则是1分钟内各弹种在会心距离内命中伤害1.75倍，非会心距离命中无效果</p>
+<p><strong>跳跃</strong></p>
+<p>　　+10：飞燕，跳跃攻击的伤害与积蓄値×1.1倍</p>
+<p><strong>会心强化</strong></p>
+<p>　　+10：超会心，暴击时伤害提升</p>
+<p>　　(※通常会心1.25倍→超会心1.40倍)</p>
+<p><strong>逆上</strong></p>
+<p>　　+10：逆恨み，体力槽有红条的时候攻击力+20</p>
+<p><strong>穷地</strong></p>
+<p>　　+10：死中に活，中异常状态的时候攻击力+20(不可加迭，不会因为身上异常越多提升越多)</p>
+<p><strong>だるま</strong></p>
+<p>　　+10：だるま，雪・泡・骨等把人包住的异常无效化</p>
+<p><strong>チャンス</strong></p>
+<p>　　+10：切り札，跟大型魔物战斗中，机会来临时狩技威力上升(这边的机会大概是像骑倒之类的)</p>
+<p>　　※效果持续1分钟，使用狩技的伤害或持续时间1.2倍，此外，部分的狩技效果上升</p>
+<p><strong>无心</strong></p>
+<p>　　+10：明镜止水，狩技/勇气/炼金槽累积速度上升</p>
+<p><strong>英雄の盾</strong></p>
+<p>　　+10：英雄の护り，把小伤害无效化</p>
+<p>　　(※5以下伤害无效化，还有屁股不会着地的功能)</p>
+<p><strong>泡沫</strong></p>
+<p>　　+10：泡沫の舞，回避行动会缠上泡沫，不会进入泡沫大(整个人被泡泡包住)，缠泡沫的时候带有相当于回避性能+1跟体术+1的能力，视为异常可以发动穷地</p>
+<p><strong>连撃</strong></p>
+<p>　　+10：连撃の心得，连续攻击命中时会心率上升(5秒内，2hit+25%会心，3hit+30%)</p>
+<p>　　※只要5秒内有攻击命中，会一直重置5秒持续时间，效果消失前命中3次攻击会心效果变成提升30%(一样为持续5秒机制)。</p>
+<p>　　※操虫棍用虫攻击可以纳入连击计算的第一下，所以先用虫撞过之后用棍子砍的第一刀(实则为第二刀)就能触发效果</p>
+<p><strong>里会心</strong></p>
+<p>　　+10：痛恨会心，负会心一定机率翻转成正值</p>
+<p>　　※这技能只对负会心武器有效，负会心发动时，有25%的机率将负会心转成超绝会心，将原本0.75倍的伤害转换成2倍伤害，以-50%会心的武器而言，发动里会心的机率：50%(负会心机率)x25%→12.5%。</p>
+<p><strong>我慢</strong></p>
+<p>　　+10：虎视眈々，被打之后狩技槽、勇气槽、錬金槽上升</p>
+<p><strong>护石强化</strong></p>
+<p>　　+10：护石系统倍化，护石的技能点加倍(包含插在护石上的技能珠)</p>
+<p><strong>刃鳞</strong></p>
+<p>　　+10：刃鳞磨き，拔刀中回避翻滚会有一下效果</p>
+<p>　　剑士：斩れ味少量回复</p>
+<p>　　弓：接撃瓶强化</p>
+<p>　　补充：轻弩、重弩拔刀中作回避动作时，有机率装填一颗弹药，剑士必须作回避动作数次才能回复一次斩味</p>
+<p><strong>秘术</strong></p>
+<p>　　+10：スキ儿加点＋2，全身装备的技能点+2</p>
+<p><strong>SP延长</strong></p>
+<p>　　+10：SP时间延长，SP狩技发动后的SP状态时间延长</p>
+<p><strong>龙气</strong></p>
+<p>　　+10：龙气活性，体力三分之二以下时身上出现龙属性异常(无效龙属以外武器的属性)，附带龙属异常的时候全耐性升至50，攻击力提升1.1倍</p>
+<p><strong>战斗系技能(剑士专用)</strong></p>
+<p><strong>斩れ味</strong></p>
+<p>　　+10：业物，攻击时、格挡成功时（只有大剑跟盾斧特定情况格挡会掉斩味）斩れ味的消耗减半</p>
+<p>　　-10：なまくら，攻击时、格挡成功成功时（一样大剑跟盾斧限定）斩れ味的消耗倍增</p>
+<p><strong>剑术</strong></p>
+<p>　　+10：心眼，不会弹刀</p>
+<p><strong>匠</strong></p>
+<p>　　+15：斩れ味レベ儿+2，斩れ味大幅延长</p>
+<p>　　+10：斩れ味レベ儿+1，斩れ味延长</p>
+<p><strong>研ぎ师</strong></p>
+<p>　　+10：砥石使用高速化，磨刀动作只要做一下就磨好武器</p>
+<p>　　-10：砥石使用低速化，磨刀动作要做5下才能磨好武器</p>
+<p><strong>抜刀会心</strong></p>
+<p>　　+10：抜刀术【技】拔出武器攻击的那一下会心率+100％</p>
+<p><strong>抜刀减气</strong></p>
+<p>   ：+10 抜刀术【力】切断属性的武器拔刀攻击的那一下附带打击武器的减气功能</p>
+<p>　　(※命中头部也会有气绝效果)</p>
+<p><strong>ガード强化</strong></p>
+<p>　　+10：ガード强化，可以挡住平常档不住的攻击</p>
+<p><strong>ガード性能</strong></p>
+<p>　　+15：ガード性能+2，格挡时被打退的伤害大幅降低</p>
+<p>　　+10：ガード性能+1，格挡时被打退的伤害小幅降低</p>
+<p>　　-10：ガード性能-1，格挡时被打退的伤害增加</p>
+<p><strong>钝器</strong></p>
+<p>　　+10：钝器使い，武器斩味变烂的时候攻击力上升</p>
+<p>　　紫、白、蓝斩味无效果</p>
+<p>　　绿斩：攻击力1.1倍</p>
+<p>　　黄斩：攻击力1.15倍</p>
+<p>　　橘、红斩：攻击1.2倍</p>
+<p>　　※基本上钝器有算斩味的攻击补正为绿斩时效益最好</p>
+<p><strong>纳刀研磨</strong></p>
+<p>　　+10：挑戦者の纳刀，魔物于愤怒状态时纳刀一定机率回复斩れ味</p>
+<p><strong>战斗系技能(远程手专用)</strong></p>
+<p><strong>通常弾追加</strong></p>
+<p>　　+10：通常弾全LV追加，可以装填各种通常弹</p>
+<p><strong>贯通弾追加</strong></p>
+<p>　　+15：贯通弾全LV追加，可以装填各种贯通弹</p>
+<p>　　+10：贯通弾LV1追加，可以装填LV1贯通弾</p>
+<p><strong>散弾追加</strong></p>
+<p>　　+15：散弾全LV追加，可以装填所有散弹</p>
+<p>　　+10：散弾LV1追加，可以装填LV1散弹</p>
+<p><strong>榴弾追加</strong></p>
+<p>  +15 彻甲榴弾全LV追加，可装填各种彻甲榴弹</p>
+<p>　　+10：彻甲榴弾LV1追加，可装填LV1彻甲榴弹</p>
+<p><strong>扩散弾追加</strong></p>
+<p> 　+15：扩散弾全LV追加，可装填所有扩散弹</p>
+<p>　　+10：扩散弾LV1追加，可装填LV1扩散弹</p>
+<p><strong>速射</strong></p>
+<p>　　+10：连発数+1，轻弩速射连发数+1</p>
+<p><strong>反动(轻弩重弩都适用)</strong></p>
+<p>　　+20：反动軽减+3，弩的反动大幅减轻</p>
+<p>　　+15：反动軽减+2，弩的反动减轻</p>
+<p>　　+10：反动軽减+1，弩的反动稍微减轻</p>
+<p>　　-10：反动軽减-1，弩的反动稍微增大</p>
+<p>　　-15：反动軽减-2，弩的反动增大</p>
+<p>　　-20：反动軽减-3，弩的反动大幅增大</p>
+<p><strong>精密射撃</strong></p>
+<p>　　+15：ブレ抑制+2，全部的弹道不会偏离</p>
+<p>　　+10：ブレ抑制+1，弹道大偏离变小偏离，小偏离无效化</p>
+<p>　　-10：ブレ抑制-1，弹道偏离小变大</p>
+<p>　　-15：ブレ抑制-2，怎么打怎么偏</p>
+<p><strong>强撃瓶追加</strong></p>
+<p>　　+15：强撃ビン全LV追加，可以装填所有强击瓶</p>
+<p>　　+10：强撃ビンLV1追加，可以装填强击瓶LV1</p>
+<p><strong>属强瓶追加</strong></p>
+<p>　　+15：属强ビン全LV追加，可以装填所有属强瓶</p>
+<p>　　+10：属强ビンLV1追加，可以装填属强瓶LV1</p>
+<p><strong>接撃瓶追加</strong></p>
+<p>　　+10：接撃ビン追加，可以装填接撃瓶</p>
+<p><strong>毒瓶追加</strong></p>
+<p>　　+10：毒ビン追加，可以装填毒瓶</p>
+<p><strong>麻痹瓶追加</strong></p>
+<p>　　+10：麻痹ビン追加，可以装填麻痹瓶</p>
+<p><strong>睡眠瓶追加</strong></p>
+<p>　　+10：睡眠ビン追加，可以装填睡眠瓶</p>
+<p><strong>减气瓶追加</strong></p>
+<p>　　+10：减气ビン追加可以装填减气瓶</p>
+<p><strong>爆破瓶追加</strong></p>
+<p>：+10 爆破ビン追加，可以追加爆破瓶</p>
+<p><strong>装填速度</strong></p>
+<p>　　+20：装填速度+3，弩系武器的Reload大幅加快、弓的瓶子切换不用装填</p>
+<p>　　+15：装填速度+2，弩系武器的Reload加速、弓的瓶子切换不用装填</p>
+<p>　　+10：装填速度+1，弩炮的的Reload速度稍微加快、弓的瓶子装备速度加快</p>
+<p>　　-10：装填速度-1，弩系武器的Reload跟弓的装瓶速度稍微减缓</p>
+<p>　　-15：装填速度-2，弩系武器的Reload跟弓装瓶速度减缓</p>
+<p>　　-20：装填速度-3，弩系武器的Reload跟弓装瓶速度大幅减缓</p>
+<p><strong>通常弾强化</strong></p>
+<p>　　+10：通常弾・连射矢UP，通常弹跟连射矢的威力×1.1倍</p>
+<p><strong>贯通弾强化</strong></p>
+<p>　　+10：贯通弾・贯通矢UP，贯通弹之贯通矢的威力×1.1倍</p>
+<p><strong>散弾强化</strong></p>
+<p>　　+10：散弾・扩散矢UP，散弹的威力×1.2倍、扩散矢的威力×1.3倍</p>
+<p><strong>射法</strong></p>
+<p>　　+10：弾导强化，一部分的子弹/箭矢伤害最高的时间带延长</p>
+<p><strong>调合数</strong></p>
+<p>　　+10：最大数生产，调和生产数有浮动的道具时(讲白了就是子弹/瓶子类)，必为最大生产数</p>
+<p><strong>弾薬节约</strong></p>
+<p>　　+10：弾薬节约，射撃时、背包里的弾或瓶有机会不消耗(※不管你躺着射，坐着射，趴着射都有效)</p>
+<p><strong>重撃弾强化</strong></p>
+<p>　　+10：重撃弾・重射矢UP，重撃弹・重射矢威力提升</p>
+<p><strong>変则射撃</strong></p>
+<p>　：+10 特定射撃强化，特定的射撃(武器内藏弹、曲射、刚射)威力×1.2倍</p>
+<p><strong>猫强化技能</strong></p>
+<p><strong>采配</strong></p>
+<p>　　+10：オトモへの采配，同行伙伴猫能力强化</p>
+<p><strong>号令</strong></p>
+<p>　　+10：オトモへの号令，伙伴猫会听命令行动，做特殊动作时会跟猫一起回复</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/怪物猎人/" rel="tag"># 怪物猎人</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/30/websocket1/" rel="prev" title="WebSocket实践（一）">
+                WebSocket实践（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Fullstop000" />
+          <p class="site-author-name" itemprop="name">Fullstop000</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#怪物猎人xx-全技能效果表"><span class="nav-number">1.</span> <span class="nav-text">怪物猎人xx 全技能效果表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fullstop000</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
