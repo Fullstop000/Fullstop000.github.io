@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Fabric,Hyperledger,blockchain," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fullstop000&#39;s blog">
-<meta property="og:url" content="http://Fullstop000.github.io/index.html">
+<meta name="description" content="A road to Fabric - create channel 梳理 (上) 代码版本 Fabric : release 5afac39fcdb1d245aab3a94b825ebadb99cdad72 Fabric-go-sdk : master 9fe40b3f41260f5f4f7c8919117c8b07550871fd  1. 生成 crypto - config todo  2.">
+<meta name="keywords" content="Fabric,Hyperledger,blockchain">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A road to Fabric - create channel 梳理 (上)">
+<meta property="og:url" content="http://Fullstop000.github.io/2017/10/10/create channel 梳理/index.html">
 <meta property="og:site_name" content="Fullstop000&#39;s blog">
+<meta property="og:description" content="A road to Fabric - create channel 梳理 (上) 代码版本 Fabric : release 5afac39fcdb1d245aab3a94b825ebadb99cdad72 Fabric-go-sdk : master 9fe40b3f41260f5f4f7c8919117c8b07550871fd  1. 生成 crypto - config todo  2.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-10T03:28:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fullstop000&#39;s blog">
+<meta name="twitter:title" content="A road to Fabric - create channel 梳理 (上)">
+<meta name="twitter:description" content="A road to Fabric - create channel 梳理 (上) 代码版本 Fabric : release 5afac39fcdb1d245aab3a94b825ebadb99cdad72 Fabric-go-sdk : master 9fe40b3f41260f5f4f7c8919117c8b07550871fd  1. 生成 crypto - config todo  2.">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://Fullstop000.github.io/"/>
+  <link rel="canonical" href="http://Fullstop000.github.io/2017/10/10/create channel 梳理/"/>
 
 
 
 
 
-  <title>Fullstop000's blog</title>
+  <title>A road to Fabric - create channel 梳理 (上) | Fullstop000's blog</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/10/create channel 梳理/" itemprop="url">A road to Fabric - create channel 梳理 (上)</a></h1>
+          <h1 class="post-title" itemprop="name headline">A road to Fabric - create channel 梳理 (上)</h1>
         
 
         <div class="post-meta">
@@ -351,9 +352,7 @@
       
 
       
-        
-          
-            <h1 id="A-road-to-Fabric-create-channel-梳理-上"><a href="#A-road-to-Fabric-create-channel-梳理-上" class="headerlink" title="A road to Fabric - create channel 梳理 (上)"></a>A road to Fabric - create channel 梳理 (上)</h1><blockquote>
+        <h1 id="A-road-to-Fabric-create-channel-梳理-上"><a href="#A-road-to-Fabric-create-channel-梳理-上" class="headerlink" title="A road to Fabric - create channel 梳理 (上)"></a>A road to Fabric - create channel 梳理 (上)</h1><blockquote>
 <p>代码版本</p>
 <p>Fabric : release 5afac39fcdb1d245aab3a94b825ebadb99cdad72</p>
 <p>Fabric-go-sdk : master 9fe40b3f41260f5f4f7c8919117c8b07550871fd</p>
@@ -390,8 +389,6 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// createOrUpdateChannel 部分代码</span></div><div class="line"><span class="comment">// Send request</span></div><div class="line">_, err := request.Orderer.SendBroadcast(&amp;fab.SignedEnvelope&#123;</div><div class="line">	Signature: signature,</div><div class="line">	Payload:   payloadBytes,</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>在<code>SendBroadcast</code>中使用grpc调用Orderer的<code>Broadcast</code>函数，相关的protobuf为<code>fabric/protos/orderer/ab.proto</code>，接下来进入Orderer内部处理的环节</p>
 
-          
-        
       
     </div>
     
@@ -406,316 +403,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Fullstop000.github.io/2017/09/30/websocket1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fullstop000">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fullstop000's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/30/websocket1/" itemprop="url">WebSocket实践（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T14:05:10+08:00">
-                2017-09-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Fabric/" rel="tag"># Fabric</a>
           
-
+            <a href="/tags/Hyperledger/" rel="tag"># Hyperledger</a>
           
-            
+            <a href="/tags/blockchain/" rel="tag"># blockchain</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>WebSocket解决了使用HTTP协议所带来的不能连续接收server端状态变化的问题（如聊天场景），具体区别见下面这张图</p>
-<img src="/2017/09/30/websocket1/img_http_websocket.png" alt="img_http_websocket.png" title="">
-<p>主要区别：</p>
-<ul>
-<li>HTTP : request - response单向通信，短链接 ; WebSocket : Bi-directional messages双向通信，长链接</li>
-<li>Websocket在一个链接内能让server主动推送数据给client
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/30/websocket1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/30/websocket1/" rel="next" title="WebSocket实践（一）">
+                <i class="fa fa-chevron-left"></i> WebSocket实践（一）
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Fullstop000.github.io/2017/09/29/mhxx-abilities/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fullstop000">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fullstop000's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/29/mhxx-abilities/" itemprop="url">怪物猎人xx 全技能效果表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-29T18:33:17+08:00">
-                2017-09-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/游戏/" itemprop="url" rel="index">
-                    <span itemprop="name">游戏</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="怪物猎人xx-全技能效果表"><a href="#怪物猎人xx-全技能效果表" class="headerlink" title="怪物猎人xx 全技能效果表"></a>怪物猎人xx 全技能效果表</h1><p><strong>基础能力值相关</strong></p>
-<p><strong>体力</strong></p>
-<p>　　+15：体力最大値+50</p>
-<p>　　+10：体力最大値+20</p>
-<p>　　-10：体力最大値减少10</p>
-<p>　　-15：体力最大値减少30</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/29/mhxx-abilities/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -725,10 +446,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -736,6 +458,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -756,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -819,6 +554,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-road-to-Fabric-create-channel-梳理-上"><span class="nav-number">1.</span> <span class="nav-text">A road to Fabric - create channel 梳理 (上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-生成-crypto-config"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 生成 crypto - config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成-channel-tx"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 生成 channel.tx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Envelop"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">创建Envelop</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用当前User对Envelop-Payload-ConfigUpdateEnvelop签名"><span class="nav-number">1.0.3.</span> <span class="nav-text">3 .使用当前User对Envelop.Payload.ConfigUpdateEnvelop签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-重新用Orderer的MSP生成txid，设置Envelop-Payload-Header"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 重新用Orderer的MSP生成txid，设置Envelop.Payload.Header</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -932,10 +683,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
